@@ -37,12 +37,14 @@ export const CMSLink: React.FC<CMSLinkType> = ({
         }`
       : url
 
-  if (!href) return (
-    <Link href={'/'} className={className}>
-      {label && label}
-      {children && children}
-    </Link>
-  )
+  if (!href) {
+    return (
+      <Link href={'/'} className={className}>
+        {label && label}
+        {children && children}
+      </Link>
+    )
+  }
 
   if (!appearance) {
     const newTabProps = newTab ? { target: '_blank', rel: 'noopener noreferrer' } : {}

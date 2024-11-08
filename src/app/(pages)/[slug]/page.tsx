@@ -53,6 +53,7 @@ export default async function Page({ params: { slug = '' } }) {
   return (
     <React.Fragment>
       {
+        // prettier-ignore
         slug !== 'blogs' && <Hero {...hero} />
       }
       <Blocks
